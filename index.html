@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Optional JavaScript -->
+    <!-- Jquery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+    <title>Personal Movie List</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+
+        .mytitle {
+            width: 100%;
+            height: 250px;
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://wallpapers.com/images/featured/movie-9pvmdtvz4cb0xl37.jpg');
+            background-position: center;
+            background-size: cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mytitle>button {
+            width: 200px;
+            height: 50px;
+            background-color: transparent;
+            color: white;
+            border-radius: 50px;
+            border: 1px solid white;
+            margin-top: 10px;
+        }
+
+        .mytitle>button:hover {
+            border: 2px solid white;
+            color: black;
+            background-color: white;
+        }
+
+        .mycards {
+            margin: 20px auto 0px auto;
+            width: 95%;
+            max-width: 1200px;
+            /* dengan max-width, maka lebar tidak akan melebihi */
+        }
+
+        /* Untuk menyamakan ukuran foto dalam kartu dan fungsi object-fit supaya foto di zoom dan bukan stretch*/
+        /* .card-img-top {
+            width: 100%;
+            height: 30vw;
+            object-fit: cover;
+        } */
+
+        .comment {
+            color: gray;
+        }
+
+        .mypost {
+            width: 95%;
+            max-width: 500px;
+            margin: 20px auto 0px auto;
+            padding: 20px;
+            box-shadow: 0px 0px 3px 0px gray;
+        }
+
+        .mybtns {
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mybtns>button {
+            margin-right: 10px;
+        }
+
+    </style>
+    <script>
+        function hey() {
+            alert('Hello World!');
+        }
+    </script>
+</head>
+
+<body>
+    <div class="mytitle">
+        <h1>My Favorite Movies</h1>
+        <button>Save a new movie</button>
+    </div>
+
+    <div class="mypost">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Enter Movie URL">
+            <label for="floatingInput">Movie URL</label>
+        </div>
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">Stars</label>
+            <select class="form-select" id="inputGroupSelect01">
+                <option selected>-- Select a rating --</option>
+                <option value="1">★</option>
+                <option value="2">★★</option>
+                <option value="3">★★★</option>
+                <option value="4">★★★★</option>
+                <option value="5">★★★★★</option>
+            </select>
+        </div>
+
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">Comment</label>
+        </div>
+        <div class="mybtns">
+            <button onclick="hey()" type="button" class="btn btn-dark">Save</button>
+            <button type="button" class="btn btn-outline-dark">Close</button>
+        </div>
+
+
+    </div>
+
+
+    <div class="mycards">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+                <div>
+                    <div class="card h-100">
+                        <img class="card-img-top"
+                            src="https://m.media-amazon.com/images/I/71NPmBOdq7L._AC_UF894,1000_QL80_.jpg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Blade Runner 2049</h5>
+                            <p class="card-text">Underrated.
+                            <p>★★★★☆</p>
+                            <p class="comment">Ini adalah comment warna abu-abu</p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <div class="card h-100">
+                        <img class="card-img-top" src="https://i.ebayimg.com/images/g/7LYAAOSwrXhiuV1R/s-l1200.jpg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">The Gray Man</h5>
+                            <p class="card-text">Ryan Gosling nih bos.
+                            <p>★★★★☆</p>
+                            <p class="comment">Ini adalah comment warna abu-abu</p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <div class="card h-100">
+                        <img class="card-img-top"
+                            src="https://media1.popsugar-assets.com/files/thumbor/9eendxMbcAIjlGPN9wAGWe9VRpE/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2023/04/04/606/n/1922283/d37d2acbdda350b9_BARBIE_Character_RYAN_InstaVert_1638x2048_DOM/i/Ryan-Gosling-Barbie-Poster.jpg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Barbie</h5>
+                            <p class="card-text">Ada Ryan Gosling Coy.
+                            <p>★★★★☆</p>
+                            <p class="comment">Ini adalah comment warna abu-abu</p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <div class="card h-100">
+                        <img class="card-img-top"
+                            src="https://m.media-amazon.com/images/I/81tdQqbCdWL._AC_UF894,1000_QL80_.jpg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Drive</h5>
+                            <p class="card-text">Ryan Gosling tapi nyetir.
+                            <p>★★★★☆</p>
+                            <p class="comment">Ini adalah comment warna abu-abu</p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
